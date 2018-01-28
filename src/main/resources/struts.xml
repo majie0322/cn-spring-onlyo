@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <!--
+        struts.xml中主要配置2个内容：
+        1.Filter如何根据请求路径找到
+            Action及方法；
+        2.Filter如何根据方法的返回值
+            找到对应页面；
+    -->
+
+    <!--
+        可以有多个package，通常我们把
+        每一个模块的配置放到一个package下；
+        package元素是用来封装action元素的；
+        name属性是package元素的引用名；
+        namespace属性是package元素的部署名，
+          它必须以“/”开头；
+        extends是继承，表示当前package继承
+        于struts-default，相当于将struts-default
+        下的所有内容复制到了当前package下；
+     -->
+    <package name="deme1" namespace="/" extends="struts-default">
+        <!--class直接去spring容器中寻找-->
+        <action name="hello1" class="helloAction" method="execute">
+            <result name="success">/index.jsp</result>
+        </action>
+
+    </package>
+    <!--
+        可以有多个action元素，每一个
+        action元素对应一个请求；
+        name属性是action元素的名称，用来
+        访问action元素的；
+        class是要注册的Action的类名；
+        method是本次请求要调用的方法名；
+     -->
+
+
+</struts>
