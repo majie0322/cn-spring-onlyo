@@ -41,8 +41,7 @@
             </list>
         </property>
     </bean>
-    <bean id="jdataSource" class="org.apache.commons.dbcp.BasicDataSource"
-          destroy-method="close">
+    <bean id="jdataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="url" value="jdbc:mysql://localhost:3306/test?characterEncoding=utf-8"></property>
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
         <property name="username" value="root"></property>
