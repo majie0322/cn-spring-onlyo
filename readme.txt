@@ -48,6 +48,7 @@ eg:execution(* org.dd.dao.* (..))
    类DaoSupport： JdbcDaoSupport,hibernateDaoSupport
 
    类Template：jdbcTemplate,HibernateTemplate
+
    3）spring提供了声明式事物管理方法（aop ）
 
    2 spring整合jdbc
@@ -62,3 +63,20 @@ eg:execution(* org.dd.dao.* (..))
 5.事物管理
 1）声明式事务管理（基于配置方式实现事物管理）
 2）编程式事务管理（基于java编程实现事物管理）
+
+
+6.反射机制
+
+1）回顾反射的基本概念(不需要明确的对象，所有的对象使用Object表示)
+可以直接利用Object与反射机制混合调用类中的方法
+
+2）分析简单java类与反射联系
+
+3）利用反射实例化对象
+class类如果使用forName（）方法之后，就可以使用Class定义的newInstance（）默认去调用
+类型中无参构造方法
+整个编程中 即使不完全不知道类的结构，不导入包类 也可以实例化对象
+如果使用反射对象，必须要求类中使用class类，newInstance只能使用无参构造
+这时候只能取得类中的构造方法，传递所需要的参数后才可以执行。
+
+7 web对反射的操作支持
