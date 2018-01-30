@@ -80,3 +80,10 @@ class类如果使用forName（）方法之后，就可以使用Class定义的new
 这时候只能取得类中的构造方法，传递所需要的参数后才可以执行。
 
 7 web对反射的操作支持
+
+
+8 socket:封装  着本地的地址，服务端口等信息
+    serverSocket:服务端套接字
+socket主动连接serversocket，一个serversocket接收多个socket的连接
+
+Socket连接基于TCP/IP协议 是一种长连接
