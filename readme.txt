@@ -87,3 +87,29 @@ class类如果使用forName（）方法之后，就可以使用Class定义的new
 socket主动连接serversocket，一个serversocket接收多个socket的连接
 
 Socket连接基于TCP/IP协议 是一种长连接
+
+9 线程池
+ExecutorService提供了管理终止线程池的方法
+线程池的创建都是工厂方法。我们不要直接去new 线程池，应为线程池的创建还要做很多的准备工作
+
+Executors.newCachedThreadPool()
+可以根据任务需要动态创建线程，来执行任务。若线程池中有空闲的线程将重用该线程来执行任务
+。没有空闲的则创建新线程来完成任务
+理论上池子里可以放int最大值个线程
+
+Executors.newFixedThreadPool(int threads)
+创建固定大小的线程池。池中的线程数是固定的， 若所有的线程处于饱和状态，
+新任务将排队等待
+
+Executors.newScheduledThreadPool()
+创建具有延迟效果的线程池，可将带运动的任务延迟指定时长后再运行
+
+Executors.newlngeThreadExecutor()
+创建单线程的线程池，池中仅有一个线程，所有未运行任务排队等待
+
+10 双缓冲队列
+BlockingQueue：
+
+解读了读写数据阻塞问题 但是同时写或者读还是同步的
+
+

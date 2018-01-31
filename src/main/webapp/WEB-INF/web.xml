@@ -13,6 +13,9 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    <listener>
+        <listener-class>cn.spring.onlyo.test.ServletContextListenerTest</listener-class>
+    </listener>
 <!--将templcate中session关闭动作推迟到jsp解析-->
     <filter>
         <filter-name>openSessionInViewFilter</filter-name>

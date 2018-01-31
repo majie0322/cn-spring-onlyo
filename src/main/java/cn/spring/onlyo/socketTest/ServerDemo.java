@@ -29,7 +29,9 @@ public class ServerDemo {
         System.out.println("等待客户端连接。。。。。。。。");
         try {
             /**
-             * 使服务器开始等待 接收客户端连接 该方法是一个阻塞方法 直到客户端与其连接 否则该方法不会结束
+             * 使服务器开始等待 接收客户端连接
+             * 该方法是一个阻塞方法
+             * 直到客户端与其连接 否则该方法不会结束
              */
             Socket socket = serverSocket.accept();
 
@@ -44,7 +46,7 @@ public class ServerDemo {
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
-            String info = reader.readLine();
+            String info = reader.readLine();//会阻塞
             System.out.println(info);
 
             // 发送 信息给客户端
