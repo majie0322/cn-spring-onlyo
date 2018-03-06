@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 public class JdbcBasicDao extends JdbcDaoSupport {
 
+
     @Resource
     public void setMyDataSource(DataSource ds) {
         super.setDataSource(ds);
